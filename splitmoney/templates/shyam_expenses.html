@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>SHYAM EXPENSES</title>
+</head>
+<body>
+	<!-- display of all expenditures -->
+	<h1> Shyam Expenses</h1>
+	{%if my_expenses%}
+		{% for k in my_expenses %}
+			<h6> Expense on activity</h6>{{k.activity}}<br>
+			<h6> Personal Expense</h6>{{k.personal_exp}}<br>
+			<h6> To be Share Expense</h6>{{k.sharing_exp}}<br>
+			<hr>
+		{%endfor%}
+	{%endif%}
+	<!-- form to update new expenditures -->
+<form method="Post" action=" ">
+		{% csrf_token %}
+		<div>
+			{{ form.as_p}}
+		</div>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
