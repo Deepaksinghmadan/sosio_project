@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+
+{% block bill1%}
+<form method="Post" action=" ">
+		{% csrf_token %}
+		<div>
+			{{ form.as_p}}
+		</div>
+		<button type="submit">Submit</button>
+	</form>
+{%endblock%}
+
+{% block report1%}
+{%if allexp%}
+	{% for k in allexp %}
+		Expense-{{k.activity}}<br>
+		You paid-{{k.personal_exp}}<br>
+		You lend-{{k.sharing_exp}}<br>
+		<hr>
+{%endfor%}
+{%endif%}
+
+
+{%endblock%}

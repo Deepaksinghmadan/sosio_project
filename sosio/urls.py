@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from splitmoney.views import *
+from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^ramexpenses/$', Personal1), #mapping to individual views for expense details
-    url(r'^shyamexpenses/$', Personal2),
-    url(r'^dashboard/$', Dashboard), #screen to show who owe who
+    url(r'^detail/$', Personal1), #mapping to individual views for expense details
+    url(r'^addbill/$', Personal2),
+    url(r'^dashboard/$', Dashboard),
+    url(r'^bootstrap/$', TemplateView.as_view(template_name="bootstrap/example.html")), #screen to show who owe who
 ]

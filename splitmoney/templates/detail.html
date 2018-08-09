@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+<!-- display of all expenditures -->
+{%block report2%}
+{%if my_expenses%}
+	{% for k in my_expenses %}
+		Expense-{% block report21 %}{{k.activity}}{%endblock%}<br>
+		Your personal expense-{% block report22 %}{{k.personal_exp}}{%endblock%}<br>
+		Your shared expense-{% block report23 %}{{k.sharing_exp}}{%endblock%}<br>
+		<hr>
+	{%endfor%}
+	{%endif%}
+{%endblock%}
+
+{%block report1%}
+
+{%endblock%}
+
+{% block bill1%}
+<form method="Post" action=" ">
+		{% csrf_token %}
+		<div>
+			{{ form.as_p}}
+		</div>
+		<button type="submit">Submit</button>
+	</form>
+{%endblock%}
+<!-- form to update new expenditures -->
