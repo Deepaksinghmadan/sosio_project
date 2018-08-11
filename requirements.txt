@@ -24,6 +24,7 @@ matplotlib==2.1.2
 numpy==1.14.0
 pandas==0.22.0
 pipenv==2018.7.1
+psycopg2==2.7.5
 pyasn1==0.4.3
 pyasn1-modules==0.2.1
 pycparser==2.18
