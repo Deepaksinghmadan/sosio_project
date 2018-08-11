@@ -1,1 +1,1 @@
-web: gunicorn sosio_project.wsgi
+web: gunicorn sosio.wsgi
