@@ -14,6 +14,8 @@ import os
 
 # # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import dj_database_url
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files (CSS, JavaScript, Images)
@@ -35,7 +37,7 @@ SECRET_KEY = 'z1)8up^gr4nsd=)k#il*h2^&0f#gd++bxb^=tl=xuz&v4e#izm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sosiover2.herokuapp.com','localhost']
 
 
 # Application definition
@@ -85,14 +87,7 @@ WSGI_APPLICATION = 'sosio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES = {'default': dj_database_url.parse('postgres://xmxjhlorwpbubr:9059f716bf8a56d3b472369075893222047043780eea1f4933cc95d292a5d91f@ec2-54-225-76-201.compute-1.amazonaws.com:5432/dr4v6ut69si19')}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
