@@ -87,11 +87,7 @@ WSGI_APPLICATION = 'sosio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=dj_database_url.config('DATABASE_URL')
-    )
-}
+DATABASES = {'default': dj_database_url.parse('postgres://xmxjhlorwpbubr:9059f716bf8a56d3b472369075893222047043780eea1f4933cc95d292a5d91f@ec2-54-225-76-201.compute-1.amazonaws.com:5432/dr4v6ut69si19')}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
