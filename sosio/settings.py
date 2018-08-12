@@ -37,7 +37,7 @@ SECRET_KEY = 'z1)8up^gr4nsd=)k#il*h2^&0f#gd++bxb^=tl=xuz&v4e#izm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sosiover2.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['sosioverprod.herokuapp.com']
 
 
 # Application definition
