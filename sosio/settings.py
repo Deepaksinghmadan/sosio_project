@@ -35,7 +35,7 @@ SECRET_KEY = 'z1)8up^gr4nsd=)k#il*h2^&0f#gd++bxb^=tl=xuz&v4e#izm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sosiover2.herokuapp.com']
+ALLOWED_HOSTS = ['sosiover2.herokuapp.com','localhost']
 
 
 # Application definition
@@ -85,19 +85,7 @@ WSGI_APPLICATION = 'sosio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dr4v6ut69si19',
-        # The following settings are not used with sqlite3:
-        'USER': 'xmxjhlorwpbubr',
-        'PASSWORD': '9059f716bf8a56d3b472369075893222047043780eea1f4933cc95d292a5d91f',
-        'HOST': 'ec2-54-225-76-201.compute-1.amazonaws.com', # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '5432',                      # Set to empty string for default.
-    }
-}
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
