@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'sosio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'sosio',
+        'NAME': 'dr4v6ut69si19',
         # The following settings are not used with sqlite3:
         'USER': 'xmxjhlorwpbubr',
         'PASSWORD': '9059f716bf8a56d3b472369075893222047043780eea1f4933cc95d292a5d91f',
