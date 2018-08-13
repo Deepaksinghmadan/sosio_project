@@ -24,8 +24,9 @@ def Personal1(request):
 			you_lend.append(int(p)/2)
 		else:
 			you_lend.append("None")
-	r_obj=Ram.objects.all()
-	return render(request,"detail.html",{'my_expenses':r_obj,"you_lend":you_lend,"form":form})
+	s_obj=Shyam.objects.all()
+	
+	return render(request,"detail.html",{'my_expenses':s_obj,"you_lend":you_lend,"form":form})
 	
 
 def Personal2(request):
@@ -38,7 +39,7 @@ def Personal2(request):
 	else:
 		form = Expense_form2()
 	s_obj=Shyam.objects.all()
-	return render(request,"bill.html",{'my_expenses':s_obj,'form':form})
+	return render(request,"bill.html",{'my_expenses':s_obj,'bill':s_obj})
 
 
 def Dashboard(request):
