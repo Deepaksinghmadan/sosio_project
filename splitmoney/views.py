@@ -39,7 +39,7 @@ def Personal2(request):
 	else:
 		form = Expense_form2()
 	s_obj=Shyam.objects.all()
-	return render(request,"bill.html",{'my_expenses':s_obj,'bill':s_obj})
+	return render(request,"bill.html",{'my_expenses':s_obj,'bill':s_obj,"form":form})
 
 
 def Dashboard(request):
