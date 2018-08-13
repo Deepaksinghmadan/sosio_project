@@ -13,8 +13,8 @@
 {%endblock%}
 
 {% block report1%}
-{%if allexp%}
-	{% for k in allexp %}
+{%if bill%}
+	{% for k in bill %}
 		Expense-{{k.activity}}<br>
 		You paid-{{k.personal_exp}}<br>
 		You lend-{{k.sharing_exp}}<br>
